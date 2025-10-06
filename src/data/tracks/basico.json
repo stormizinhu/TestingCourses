@@ -1,0 +1,142 @@
+{
+  "track": {
+    "title": "Automação Web com Selenium: Do Zero ao Page Object",
+    "level": "Basico",
+    "audience": "QAs manuais que desejam iniciar na automação, desenvolvedores júnior e estudantes com conhecimento básico de lógica de programação.",
+    "outcomes": [
+      "Configurar um ambiente de automação com Selenium WebDriver e uma linguagem de programação (ex: Java ou Python).",
+      "Criar scripts de automação para interagir com elementos de uma página web (clicar, preencher formulários).",
+      "Implementar o padrão de projeto Page Object Model (POM) para organizar os testes.",
+      "Utilizar esperas explícitas para lidar com o dinamismo das páginas web."
+    ],
+    "hours_total": 12,
+    "modules": [
+      {
+        "title": "Módulo 1: Primeiros Passos com Selenium",
+        "hours": 3,
+        "objectives": [
+          "Configurar o ambiente de desenvolvimento com Selenium.",
+          "Entender a arquitetura do Selenium WebDriver.",
+          "Escrever o primeiro script: abrir um navegador e navegar para uma URL."
+        ],
+        "prereqs": [
+          "Lógica de programação básica.",
+          "Conhecimento de HTML e CSS (básico)."
+        ],
+        "lessons": [
+          {
+            "title": "O que é Selenium e como funciona?",
+            "type": "video",
+            "duration_min": 10,
+            "videoUrl": "https://www.youtube.com/watch?v=h5PbhC7EE7s",
+            "summary": "Descubra a suíte Selenium e a arquitetura do WebDriver, o coração da automação web.",
+            "resources": [
+              "https://www.selenium.dev/documentation/"
+            ],
+            "practice": {
+              "steps": [
+                "Instale o Java/Python e uma IDE (IntelliJ/VSCode).",
+                "Adicione a dependência do Selenium ao seu projeto (Maven/Pip).",
+                "Baixe o WebDriver correspondente ao seu navegador (ChromeDriver, GeckoDriver)."
+              ],
+              "deliverable": "Print da tela com o projeto configurado."
+            },
+            "quiz": [
+              {
+                "q": "O que o WebDriver faz?",
+                "choices": [
+                  "Executa os testes diretamente.",
+                  "É uma API que permite a comunicação entre seu código e o navegador.",
+                  "É um gravador de testes.",
+                  "É um framework de relatórios."
+                ],
+                "answer": 1,
+                "explanation": "O WebDriver atua como uma ponte, traduzindo os comandos do seu código em ações que o navegador entende."
+              }
+            ]
+          }
+        ],
+        "mission": {
+          "type": "QA_MISSION",
+          "scenario": "Crie um script de automação que abra o navegador, navegue para 'google.com', digite 'Testing Company' na barra de pesquisa e pressione Enter.",
+          "acceptance_criteria": [
+            "O script deve executar sem erros.",
+            "O navegador deve abrir e navegar para a URL correta.",
+            "O termo de pesquisa deve ser inserido e a busca realizada."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      },
+      {
+        "title": "Módulo 2: Seletores e Page Object Model",
+        "hours": 4,
+        "objectives": [
+          "Identificar elementos na página usando diferentes estratégias de seletores (ID, CSS, XPath).",
+          "Aplicar o padrão Page Object Model (POM) para criar testes mais legíveis e fáceis de manter.",
+          "Refatorar um teste simples para usar POM."
+        ],
+        "prereqs": [
+          "Conclusão do Módulo 1"
+        ],
+        "lessons": [
+          {
+            "title": "A Arte de Encontrar Elementos: Seletores",
+            "type": "video",
+            "duration_min": 15,
+            "videoUrl": "https://www.youtube.com/embed/cO5bMX13x6s",
+            "summary": "Aprenda a localizar elementos de forma robusta usando seletores CSS e XPath. Entenda a hierarquia de preferência e como evitar seletores frágeis.",
+            "resources": [],
+            "practice": {
+              "steps": [
+                "Abra o DevTools em uma página de login.",
+                "Escreva o seletor CSS para o campo de email, senha e o botão de login.",
+                "Escreva o XPath para os mesmos elementos."
+              ],
+              "deliverable": "Documento de texto com os seletores."
+            },
+            "quiz": [
+              {
+                "q": "Qual é a principal vantagem de usar um seletor de ID?",
+                "choices": [
+                  "É mais flexível.",
+                  "É único na página e geralmente o mais rápido.",
+                  "Funciona bem para elementos dinâmicos.",
+                  "É mais fácil de ler que CSS."
+                ],
+                "answer": 1,
+                "explanation": "IDs devem ser únicos por página, tornando-os uma forma muito confiável e performática de localizar um elemento."
+              }
+            ]
+          }
+        ],
+        "mission": {
+          "type": "FALHA_CONTROLADA",
+          "scenario": "Nossa página de teste possui um botão de login com um ID dinâmico (ex: 'btn-login-12345', 'btn-login-67890'). Seu teste, que usava o ID completo, está quebrando. A classe do botão é sempre 'btn-submit'.",
+          "acceptance_criteria": [
+            "Corrija o seletor para localizar o botão de forma estável, sem usar o ID dinâmico.",
+            "O teste deve passar, clicando no botão de login com sucesso.",
+            "Use um seletor de classe ou um seletor CSS que ignore a parte dinâmica do ID."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      }
+    ],
+    "badges": [
+      {
+        "code": "TRK_BASICO_POM",
+        "name": "Arquiteto de Testes",
+        "criteria": "Concluir o módulo de Page Object Model."
+      }
+    ]
+  }
+}

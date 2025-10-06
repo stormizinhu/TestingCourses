@@ -1,0 +1,137 @@
+{
+  "track": {
+    "title": "Tópicos Avançados: Performance e Testes Mobile",
+    "level": "Avancado",
+    "audience": "QAs e desenvolvedores sênior que já dominam automação web e de API e buscam expandir suas habilidades para testes de performance e mobile.",
+    "outcomes": [
+      "Planejar e executar um teste de carga básico com JMeter ou k6.",
+      "Analisar métricas de performance chave, como tempo de resposta, vazão (throughput) e taxa de erros.",
+      "Configurar o ambiente para automação de testes mobile com Appium.",
+      "Escrever um script de teste para uma funcionalidade simples em um aplicativo nativo (Android ou iOS)."
+    ],
+    "hours_total": 20,
+    "modules": [
+      {
+        "title": "Módulo 1: Testes de Performance com k6",
+        "hours": 6,
+        "objectives": [
+          "Escrever scripts de teste de carga em JavaScript com k6.",
+          "Definir cenários de teste com VUs (Virtual Users) e duração.",
+          "Estabelecer thresholds (limites) para validar a performance da aplicação."
+        ],
+        "prereqs": [
+          "Sólido conhecimento em testes de API.",
+          "Bom conhecimento de JavaScript."
+        ],
+        "lessons": [
+          {
+            "title": "Introdução ao k6: Performance como Código",
+            "type": "video",
+            "duration_min": 15,
+            "videoUrl": "https://www.youtube.com/embed/QjGk_jU37gI",
+            "summary": "Conheça o k6, uma ferramenta moderna para testes de performance, e aprenda a escrever seus primeiros scripts para simular carga em uma API.",
+            "resources": [
+              "https://k6.io/docs/"
+            ],
+            "practice": {
+              "steps": [
+                "Instale o k6.",
+                "Crie um script simples que faz uma requisição GET para uma API pública.",
+                "Execute o script com 10 VUs por 30 segundos.",
+                "Analise o resultado no console."
+              ],
+              "deliverable": "Arquivo do script k6 e print do resultado da execução."
+            },
+            "quiz": [
+              {
+                "q": "O que são 'VUs' no contexto do k6?",
+                "choices": [
+                  "Visual Units, para testes visuais.",
+                  "Virtual Users, para simular usuários concorrentes.",
+                  "Validation Units, para validar dados.",
+                  "Vulnerability Units, para testes de segurança."
+                ],
+                "answer": 1,
+                "explanation": "Virtual Users (VUs) simulam usuários simultâneos acessando sua aplicação, permitindo medir como ela se comporta sob carga."
+              }
+            ]
+          }
+        ],
+        "mission": {
+          "type": "QA_MISSION",
+          "scenario": "Sua tarefa é criar um teste de estresse para o endpoint GET /posts de uma API pública. O teste deve verificar se o tempo de resposta médio (p95) permanece abaixo de 500ms sob uma carga de 50 VUs.",
+          "acceptance_criteria": [
+            "O script k6 deve simular 50 VUs por 1 minuto.",
+            "Um threshold deve ser definido para falhar o teste se o p95(http_req_duration) for maior que 500.",
+            "A taxa de erros (http_req_failed) deve ser zero."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      },
+      {
+        "title": "Módulo 2: Automação Mobile com Appium",
+        "hours": 8,
+        "objectives": [
+          "Configurar o Appium Server e o Appium Inspector.",
+          "Entender o conceito de Desired Capabilities para iniciar uma sessão de teste.",
+          "Localizar elementos em um app nativo e interagir com eles."
+        ],
+        "prereqs": [
+          "Experiência com Selenium WebDriver.",
+          "Conhecimento de uma linguagem de programação (Java, Python, etc.)."
+        ],
+        "lessons": [
+          {
+            "title": "Configurando o Ambiente Appium",
+            "type": "video",
+            "duration_min": 20,
+            "videoUrl": "https://www.youtube.com/embed/T0iSe_I3a5g",
+            "summary": "Um guia passo a passo para instalar todas as ferramentas necessárias para começar a automatizar testes mobile: Node.js, Appium, Android Studio (com emulador) e Appium Inspector.",
+            "resources": [],
+            "practice": {
+              "steps": [
+                "Siga o guia e instale todo o software necessário.",
+                "Inicie o Appium Server.",
+                "Abra o Appium Inspector e conecte-se a um emulador Android com um aplicativo de exemplo."
+              ],
+              "deliverable": "Print da tela do Appium Inspector mostrando a tela do aplicativo espelhada."
+            },
+            "quiz": []
+          }
+        ],
+        "mission": {
+          "type": "FALHA_CONTROLADA",
+          "scenario": "Em nosso aplicativo de exemplo, o botão de login tem um 'content-desc' (accessibility ID) no Android, mas no iOS ele não tem. Seu script de teste, que usa o accessibility ID, funciona no Android mas falha no iOS. O elemento, no entanto, tem um XPath único em ambas as plataformas.",
+          "acceptance_criteria": [
+            "Refatore o código para usar uma estratégia de localização que funcione tanto no Android quanto no iOS.",
+            "Implemente uma lógica condicional (se for iOS, use XPath; se for Android, use Accessibility ID) ou encontre um localizador comum.",
+            "O teste de login deve passar em ambas as plataformas."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      }
+    ],
+    "badges": [
+      {
+        "code": "TRK_AVANCADO_PERF",
+        "name": "Engenheiro de Performance",
+        "criteria": "Concluir o módulo de Testes de Performance."
+      },
+      {
+        "code": "TRK_AVANCADO_MOBILE",
+        "name": "Ninja Mobile",
+        "criteria": "Concluir o módulo de Automação Mobile com Appium."
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+## Pages
+- [- Fórum QA](/forumtopic): No description available
+- [- Testing Courses](/lessonview): No description available
+- [- Testing Courses](/productdetail): No description available
+- [- Testing Courses](/trackdetail): No description available
+- [Administração - Testing Courses](/admin): Painel administrativo da plataforma Testing Courses
+- [Cadastro - Testing Courses](/register): Crie sua conta na Testing Courses e comece sua jornada de aprendizado em testes de software
+- [Compra Realizada com Sucesso!](/success): Sua compra foi finalizada com sucesso.
+- [Dashboard - Testing Courses](/dashboard): Acompanhe seu progresso, pontos e conquistas na plataforma Testing Courses
+- [Fórum QA - Testing Courses](/forum): Participe das discussões da comunidade Testing Courses e tire suas dúvidas sobre testes de software
+- [Login - Testing Courses](/login): Faça login na plataforma Testing Courses e continue sua jornada de aprendizado em testes de software
+- [Loja - Testing Courses](/store): Explore nossa loja de produtos exclusivos para entusiastas de QA.
+- [Mentorias - Testing Courses](/mentorship): Agende mentorias com especialistas em testes de software e acelere seu aprendizado
+- [Perfil - Testing Courses](/profile): Visualize seu perfil, conquistas e progresso na plataforma Testing Courses
+- [Plano de Estudos - Testing Courses](/studyplan): Crie seu plano de estudos personalizado e organize sua rotina de aprendizado
+- [Ranking - Testing Courses](/leaderboard): Veja o ranking dos melhores alunos da plataforma Testing Courses
+- [Testing Courses - Acelere sua Carreira em QA](/landing): Plataforma de aprendizado gamificada para testes de software com missões práticas, mentorias e uma comunidade ativa.
+- [Trilhas de Aprendizado - Testing Courses](/tracks): Explore nossas trilhas de aprendizado em testes de software, desde o básico até o avançado

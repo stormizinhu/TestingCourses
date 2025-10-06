@@ -1,0 +1,171 @@
+{
+  "track": {
+    "title": "Fundamentos de QA: A Base para a Qualidade",
+    "level": "Gratuito",
+    "audience": "Iniciantes absolutos, estudantes, desenvolvedores curiosos e profissionais em transição de carreira que desejam entender o papel e as atividades de um Quality Assurance.",
+    "outcomes": [
+      "Compreender o ciclo de vida de desenvolvimento de software (SDLC) e o papel do QA.",
+      "Diferenciar os principais tipos e níveis de teste (funcional, não funcional, caixa-preta, caixa-branca).",
+      "Escrever um relatório de bug (bug report) claro e eficaz.",
+      "Criar casos de teste simples e objetivos."
+    ],
+    "hours_total": 4,
+    "modules": [
+      {
+        "title": "Módulo 1: O Mundo do QA",
+        "hours": 1,
+        "objectives": [
+          "Definir o que é Qualidade de Software.",
+          "Explicar o papel do QA no time de desenvolvimento.",
+          "Identificar as fases do SDLC."
+        ],
+        "prereqs": [
+          "Nenhum"
+        ],
+        "lessons": [
+          {
+            "title": "O que é Qualidade de Software?",
+            "type": "video",
+            "duration_min": 8,
+            "videoUrl": "https://www.youtube.com/embed/0goz-3I8y34",
+            "summary": "Explore o conceito fundamental de qualidade, entenda sua importância vital para o sucesso de qualquer produto e descubra como o QA é a chave para garantir essa excelência.",
+            "resources": [],
+            "practice": {
+              "steps": [
+                "Liste 3 aplicativos que você usa diariamente.",
+                "Para cada um, anote um ponto forte (qualidade) e um ponto fraco (falta de qualidade).",
+                "Compartilhe suas anotações no fórum na categoria 'Fundamentos'."
+              ],
+              "deliverable": "Post no fórum."
+            },
+            "quiz": [
+              {
+                "q": "Qual o principal objetivo do QA em um projeto?",
+                "choices": [
+                  "Apenas encontrar bugs.",
+                  "Garantir a qualidade do produto como um todo, prevenindo defeitos.",
+                  "Escrever todo o código do sistema.",
+                  "Gerenciar o projeto."
+                ],
+                "answer": 1,
+                "explanation": "O QA não apenas encontra bugs, mas atua em todo o processo para garantir a qualidade e prevenir que defeitos ocorram."
+              }
+            ]
+          },
+          {
+            "title": "O Ciclo de Vida do Software (SDLC)",
+            "type": "video",
+            "duration_min": 10,
+            "videoUrl": "https://www.youtube.com/embed/93sLgq0vBMA",
+            "summary": "Conheça as etapas do desenvolvimento de um software, do planejamento à manutenção, e onde o QA se encaixa em cada uma delas.",
+            "resources": [],
+            "practice": {
+              "steps": [
+                "Desenhe um fluxograma simples do SDLC.",
+                "Marque com um 'X' onde você acha que os testes são mais intensos."
+              ],
+              "deliverable": "Fluxograma (imagem ou texto)."
+            },
+            "quiz": [
+              {
+                "q": "Em qual modelo de SDLC o teste é uma fase distinta que ocorre apenas no final?",
+                "choices": [
+                  "Ágil (Scrum)",
+                  "Cascata (Waterfall)",
+                  "Espiral",
+                  "Lean"
+                ],
+                "answer": 1,
+                "explanation": "O modelo Cascata é caracterizado por fases sequenciais e distintas, onde o teste ocorre após a conclusão do desenvolvimento."
+              }
+            ]
+          }
+        ],
+        "mission": {
+          "type": "QA_MISSION",
+          "scenario": "Analise o site da sua cafeteria local ou de um e-commerce pequeno. Sua missão é identificar 3 melhorias de usabilidade e 1 bug funcional óbvio.",
+          "acceptance_criteria": [
+            "Listar 3 sugestões de melhoria de UX (ex: botão difícil de achar, texto confuso).",
+            "Descrever 1 bug funcional (ex: link quebrado, formulário que não envia).",
+            "O relatório deve ser claro e conciso."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      },
+      {
+        "title": "Módulo 2: A Arte de Reportar Bugs",
+        "hours": 1.5,
+        "objectives": [
+          "Entender a estrutura de um bom bug report.",
+          "Descrever passos para reproduzir um erro de forma inequívoca.",
+          "Diferenciar severidade e prioridade de um bug."
+        ],
+        "prereqs": [
+          "Conclusão do Módulo 1"
+        ],
+        "lessons": [
+          {
+            "title": "Anatomia de um Bug Report Perfeito",
+            "type": "video",
+            "duration_min": 12,
+            "videoUrl": "https://www.youtube.com/embed/P-2s98om6k0",
+            "summary": "Aprenda os campos essenciais de um relatório de bug: título, descrição, passos para reproduzir, resultado esperado, resultado atual e evidências.",
+            "resources": [],
+            "practice": {
+              "steps": [
+                "Use o template de bug report fornecido.",
+                "Descreva um bug simples que você já encontrou em algum software (ex: no Instagram, WhatsApp, etc.)."
+              ],
+              "deliverable": "Documento de texto com o bug report."
+            },
+            "quiz": [
+              {
+                "q": "Qual campo de um bug report é o mais importante para um desenvolvedor?",
+                "choices": [
+                  "O título.",
+                  "A severidade.",
+                  "Os passos para reproduzir o erro.",
+                  "A data do reporte."
+                ],
+                "answer": 2,
+                "explanation": "Os passos para reproduzir são cruciais, pois permitem que o desenvolvedor veja o erro acontecendo e possa depurá-lo."
+              }
+            ]
+          }
+        ],
+        "mission": {
+          "type": "FALHA_CONTROLADA",
+          "scenario": "Em nossa página de login de exemplo, há uma falha. O login funciona com 'user@test.com' e senha '123456', mas não com 'USER@test.com' e a mesma senha. Sua missão é reportar esse bug.",
+          "acceptance_criteria": [
+            "Criar um bug report completo para a falha de case-sensitive no campo de e-mail.",
+            "O título do report deve ser claro (ex: 'Falha no login: campo de e-mail é sensível a maiúsculas').",
+            "Os passos para reproduzir devem incluir as duas tentativas (com e sem maiúsculas)."
+          ],
+          "rubric": {
+            "critical": 60,
+            "minor": 30,
+            "report_quality": 10
+          },
+          "points": 40
+        }
+      }
+    ],
+    "badges": [
+      {
+        "code": "TRK_GRATUITO_START",
+        "name": "Explorador da Qualidade",
+        "criteria": "Concluir Módulo 1 da trilha gratuita."
+      },
+      {
+        "code": "TRK_GRATUITO_FINISH",
+        "name": "Fundamentos Sólidos",
+        "criteria": "Concluir 100% da trilha gratuita."
+      }
+    ]
+  }
+}
